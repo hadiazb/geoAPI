@@ -11,25 +11,37 @@
       box-sizing: border-box;
     }
     #map {
-      height: 500px;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
     }
   </style>
 </head>
 <body>
-  <div id="map">
+  <div class="map" id="map">
 
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHC3L7GoVmp8JTWDwaqI-DYiOXaFhPZzs"></script>
   <script>
-    function iniciarMap() {
-      var coord = {lat:4.679237 , lng:-74.1450224 };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center:coord
-      })
-    }
+const $map = document.querySelector('#map')
+    const map = new window.google.maps.Map($map, {
+      center: {
+        lat: 0,
+        lng: 0
+      },
+      zoom: 3,
+    })
+
+
+
+    // function iniciarMap() {
+    //   var coord = {lat:4.679237 , lng:-74.1450224 };
+    //   var map = new google.maps.Map(document.getElementById('map'), {
+    //     zoom: 1000,
+    //     center:coord
+    //   })
+    // }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script> -->
 </body>
 </html>
 <!-- AIzaSyAHC3L7GoVmp8JTWDwaqI-DYiOXaFhPZzs -->
