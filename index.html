@@ -3,35 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>google maps</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    #map {
-      height: 100vh;
-      width: 100vw;
-    }
-  </style>
+  <title>COVID 19</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="map" id="map">
+  <div id="map" class="map"></div>
 
-  </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARC55ZFBz-rFzj8JAgHhX8vPww2N3-a4Q"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW6qfQaTnjuo6ti9_l28oS1pJwGNnY0Z4"></script> -->
-  <script>
-    const $map = document.querySelector('#map')
-    const map = new window.google.maps.Map($map, {
-      center: {
-        lat: 0,
-        lng: 0
-      },
-      zoom: 3,
-    })
-  </script>
-  
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD7B20X6nDgerRjuW84R3lf5TtqDO6AVg"></script>
+  <script type="module" src="./index.js"></script>
+
 </body>
 </html>
