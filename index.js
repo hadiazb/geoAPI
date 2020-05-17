@@ -29,14 +29,14 @@ async function getData() {
   const data = await response.json()
   var dataBase = [
     {
-      "confirmed": null,
-      "country_code": null,
-      "dead": null,
-      "latitude": null,
-      "location": null,
-      "longitude": null,
-      "recovered": null,
-      "updated": null,
+      // "confirmed": null,
+      // "country_code": null,
+      // "dead": null,
+      // "latitude": null,
+      // "location": null,
+      // "longitude": null,
+      // "recovered": null,
+      // "updated": null,
 
     },
   ]
@@ -56,7 +56,9 @@ async function getData() {
         dataBase.push(place);
       }
     }
-  // console.log(dataBase)
+    delete dataBase[0];
+  console.log(dataBase[0])
+  console.log(dataBase)
   return dataBase
 }
 // getData()
@@ -84,7 +86,8 @@ async function renderData() {
       },
       map,
       icon,
-      title: String(item.confirmed),
+      animation: google.maps.Animation.DROP,
+      title: String(`${item.location}-${item.confirmed}`),
     })
     marker.addListener('click', () => {
       popup.setContent(renderExtraData(item))
